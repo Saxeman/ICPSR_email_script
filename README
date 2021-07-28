@@ -1,0 +1,10 @@
+Welcome to the documentation for this script I wrote
+1. Usage
+        There are 5 main command line codes
+                -f/--filename[REQUIRED ARGUMENT]: This required argument is the name of the CSV that the user will import that contains participants
+                -i/--intro: Sends the introductory email to all participants provided in the -f tag CSV
+                -c/--compsupp: Sends the support documentation email to all participants provided in the -f tag CSV
+                -u/--send_username: Sends each user their username
+                -p/--send_password: Sends each user their password
+2. Debugging
+       This code is mainly written using the smtplib and ssl library for sending emails. If you have any bugs that you cant fix just email me at ajsaxe@umich.edu and I can help
