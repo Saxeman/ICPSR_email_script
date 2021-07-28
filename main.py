@@ -7,10 +7,8 @@ import datetime
 smtp_server = 'smtp.mail.umich.edu'
 port = 465
 
-sender = 'ajsaxe@umich.edu'
-    # input('Enter your email here:')
-password = 'CircleofSin123!'
-    # input('Enter your password here:')
+sender = input('Enter your email here:')
+password = input('Enter your password here:')
 receiver = ''
 
 signature = """\
@@ -52,7 +50,7 @@ with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
             receiver = row[2]
             if args.intro:
                 intro_message = """\
-yo whats good, make sure you exclude this email address from your spam list
+This is a test message because I dont have the boilerplate email yet, make sure you exclude this email address from your spam list
 
 """
                 # possibly have this log also show who the recipient is
@@ -63,7 +61,7 @@ yo whats good, make sure you exclude this email address from your spam list
 
             if args.compsupp:
                 compsupp_message = """\
-yo whats good, here is a link to the documentation homepage www.google.com
+This is a test message because I dont have the boilerplate email yet, here is a link to the documentation homepage www.google.com
 
 """
                 server.sendmail(sender, receiver, compsupp_message + signature)
