@@ -50,6 +50,9 @@ with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
             receiver = row[2]
             if args.intro:
                 intro_message = """\
+From: {}
+To: {}
+Subject:
 This is a test message because I dont have the boilerplate email yet, make sure you exclude this email address from your spam list
 
 """
@@ -61,6 +64,9 @@ This is a test message because I dont have the boilerplate email yet, make sure 
 
             if args.compsupp:
                 compsupp_message = """\
+From: {}
+To: {}
+Subject:
 This is a test message because I dont have the boilerplate email yet, here is a link to the documentation homepage www.google.com
 
 """
