@@ -12,7 +12,7 @@ password = input('Enter your password here:')
 receiver = ''
 
 signature = """\
-Please send mail to icpsr-sptechsupp@umich.edu if you have questions about the this communication.
+Please send mail to icpsr-sptechsupp@umich.edu if you have questions about this communication.
 
 Sincerely,
 Edward J. Czilli
