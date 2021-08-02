@@ -2,6 +2,7 @@ Welcome to the documentation for this script I wrote
 1. Usage
         There are 5 main command line codes
                 -f/--filename[REQUIRED ARGUMENT]: This required argument is the name of the CSV that the user will import that contains participants
+                        NOTE: The format of the CSV is [GivenName][Surname][NonUmichEmail][Uniqname][Password][Expiry]
                 -i/--intro: Sends the introductory email to all participants provided in the -f tag CSV
                 -c/--compsupp: Sends the support documentation email to all participants provided in the -f tag CSV
                 -u/--send_username: Sends each user their username
