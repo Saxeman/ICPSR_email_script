@@ -11,11 +11,9 @@ from email.mime.base import MIMEBase
 smtp_server = 'smtp.mail.umich.edu'
 port = 465
 
-sender = 'ajsaxe@umich.edu'
-    # input('Enter your email here:')
+sender = input('Enter your email here:')
 sender_icpsr = 'icpsr-sptechsupp@umich.edu'
-password = 'CircleofSin123!'
-    # input('Enter your password here:')
+password = input('Enter your password here:')
 receiver = ''
 
 # turn these into MIME objects so they can be easily formatted as emails
@@ -219,7 +217,7 @@ with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
                     log = {'umich_error': '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())}
                     logfile.write(str(log) + '\n')
                     continue
-                username_msg = username_msg.format(sender, receiver, row[0], row[1], row[3], row[5])
+                username_msg = username_msg.format(sender_icpsr, receiver, row[0], row[1], row[3], row[5])
                 server.sendmail(sender, receiver, username_msg + signature)
                 log = {'username_message': '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())}
                 logfile.write(str(log) + '\n')
@@ -228,7 +226,7 @@ with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
                     log = {'umich_error': '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())}
                     logfile.write(str(log) + '\n')
                     continue
-                password_msg = password_msg.format(sender, receiver, row[0], row[1], row[4])
+                password_msg = password_msg.format(sender_icpsr, receiver, row[0], row[1], row[4])
                 server.sendmail(sender, receiver, password_msg + signature)
                 log = {'password_message': '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())}
                 logfile.write(str(log) + '\n')
